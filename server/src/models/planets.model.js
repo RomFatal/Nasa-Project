@@ -37,7 +37,10 @@ const promise = new Promise((resolve,reject)=>{
 promise.then((result) =>{
 })
 
+function getAllPlanets(){
+    return habitablePlanets;
+}
 module.exports = {
     loadPlanetsData,
-    planets: habitablePlanets
+    getAllPlanets
 };
