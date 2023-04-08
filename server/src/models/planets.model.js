@@ -1,8 +1,8 @@
 const { parse } = require('csv');
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 
-const planets = require('./planets.mongo')
+const planets = require('./planets.mongo');
 
 function isHabitablePlanet(planet) {
     return planet['koi_disposition'] == 'CONFIRMED'
@@ -36,7 +36,7 @@ const promise = new Promise((resolve, reject) => {
     resolve(42);
 });
 promise.then((result) => {
-})
+});
 
 async function getAllPlanets() {
     return await planets.find({},{

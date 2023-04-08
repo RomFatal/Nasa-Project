@@ -7,4 +7,4 @@ const planetsSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Planet', planetsSchema)
+module.exports = mongoose.model('Planet', planetsSchema);

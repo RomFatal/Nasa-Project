@@ -16,18 +16,18 @@ describe('Test Post /launches', () => {
         rocket: "Rom Explorer IS1",
         launchDate: "2035-02-06",
         target: "Rom-462"
-    }
+    };
     const launchDataWithoutDate = {
         mission: "Rom155",
         rocket: "Rom Explorer IS1",
         target: "Rom-462"
-    }
+    };
     const launchWithoutInvalidDate = {
         mission: "Rom155",
         rocket: "Rom Explorer IS1",
         target: "Rom-462",
         launchDate: "Invalid",
-    }
+    };
     test('It should respond with 201 created', async () => {
         const response = await request(app)
             .post('/launches')
@@ -39,7 +39,7 @@ describe('Test Post /launches', () => {
         const responseDate = new Date(response.body.launchDate).valueOf();
         expect(requestDate).toBe(responseDate);;
 
-        expect(response.body).toMatchObject(launchDataWithoutDate);;
+        expect(response.body).toMatchObject(launchDataWithoutDate);
     })
 
     test('It should catch missing required properties', async () => {
