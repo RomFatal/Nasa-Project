@@ -6,8 +6,9 @@
   "scripts": {
     "test": "jest",
     "test-watch": "jest --watch",
+    "watch": "nodemon src/server.js",
     "start": "SET PORT=8000 && node src/server.js",
-    "watch": "nodemon src/server.js"
+    "cluster": "pm2 start src/server.js -i 5"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,9 @@
     "cors": "^2.8.5",
     "csv": "^6.2.8",
     "express": "^4.18.2",
-    "install": "^0.13.0"
+    "install": "^0.13.0",
+    "mongoose": "^7.0.3",
+    "pm2": "^5.3.0"
   },
   "devDependencies": {
     "jest": "^29.5.0",
